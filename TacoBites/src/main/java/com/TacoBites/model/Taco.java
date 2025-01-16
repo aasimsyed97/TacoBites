@@ -3,7 +3,8 @@ package com.TacoBites.model;
 import lombok.Data;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-import java.time.LocalDate;
+
+import java.util.Date;
 import java.util.List;
 
 
@@ -12,7 +13,7 @@ public class Taco {
 
     private Long id;
 
-    private LocalDate createdAt;
+    private Date createdAt;
 
     @NotNull
     @Size(min=5, message="Name must be at least 5 characters long")
