@@ -12,10 +12,10 @@ import java.util.Arrays;
 import java.util.Date;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementCreator;
+import org.springframework.stereotype.Repository;
 
 
-
-
+@Repository
 public class JdbcTacoRepository implements TacoRepository{
 
     private JdbcTemplate jdbc;

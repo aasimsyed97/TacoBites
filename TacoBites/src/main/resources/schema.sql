@@ -1,8 +1,8 @@
- create table if not exists Ingredient (
-  id varchar(4) not null,
-  name varchar(25) not null,
-  type varchar(10) not null
- );
+CREATE TABLE IF NOT EXISTS Ingredient (
+  id VARCHAR(4) NOT NULL PRIMARY KEY,
+  name VARCHAR(25) NOT NULL,
+  type VARCHAR(10) NOT NULL
+);
  create table if not exists Taco (
   id identity,
   name varchar(50) not null,
@@ -15,6 +15,7 @@
   );
   alter table Taco_Ingredients
      add foreign key (taco) references Taco(id);
+
   alter table Taco_Ingredients
      add foreign key (ingredient) references Ingredient(id);
 

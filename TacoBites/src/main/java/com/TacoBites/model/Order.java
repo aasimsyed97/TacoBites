@@ -7,6 +7,7 @@ import javax.validation.constraints.Pattern;
 import org.hibernate.validator.constraints.CreditCardNumber;
 import javax.validation.constraints.NotBlank;
 import java.util.Date;
+import java.util.List;
 
 @Data
 public class Order {
@@ -14,7 +15,7 @@ public class Order {
     private Long id;
 
     private Date placedAt;
-
+    private List<Taco> tacos;
     @NotBlank(message="Name is required")
     private String name;
     @NotBlank(message="Street is required")

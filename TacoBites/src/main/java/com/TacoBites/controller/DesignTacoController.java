@@ -26,7 +26,7 @@ import java.util.stream.Collectors;
 @SessionAttributes("order")
 public class DesignTacoController {
 
-    private final IngredientRepository ingredientRepo;
+    private  IngredientRepository ingredientRepo;
     private TacoRepository designRepo;
 
     @Autowired
@@ -79,7 +79,7 @@ public class DesignTacoController {
             return "design";
         }
         Taco saved = designRepo.save(design);
-        order.addDesign(saved);
+        order.getTacos().add(saved);
         return "redirect:/orders/current";
     }
     private List<Ingredient> filterByType(List<Ingredient> ingredients , Type type ){
@@ -87,5 +87,7 @@ public class DesignTacoController {
        return ingredients.stream().filter(ingredient -> ingredient.getType().equals(type)).collect(Collectors.toList());
 
     }
+
+
 }
 
