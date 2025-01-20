@@ -41,17 +41,17 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 //                .passwordEncoder(new StandardPasswordEncoder("53cr3t"));
 
         // LDAP based authentication configuration
-                .ldapAuthentication()
-                .userSearchBase("ou=people")
-                .userSearchFilter("(uid={0})")
-                .groupSearchBase("ou=groups")
-                .groupSearchFilter("member={0}")
-                .passwordCompare()
-                .passwordEncoder(new BCryptPasswordEncoder())
-                .passwordAttribute("passcode")
-                .and()
-                .contextSource()
-                .root("dc=tacocloud,dc=com");
+//                .ldapAuthentication()
+//                .userSearchBase("ou=people")
+//                .userSearchFilter("(uid={0})")
+//                .groupSearchBase("ou=groups")
+//                .groupSearchFilter("member={0}")
+//                .passwordCompare()
+//                .passwordEncoder(new BCryptPasswordEncoder())
+//                .passwordAttribute("passcode")
+//                .and()
+//                .contextSource()
+//                .root("dc=tacocloud,dc=com");
 
 
     }
